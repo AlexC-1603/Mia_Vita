@@ -11,7 +11,7 @@ Mini sitio web de regalo interactivo, inspirado en el formato "un universo para 
 Todo lo editable está al inicio de `js/script.js`:
 
 ```js
-const NOMBRE = "Andrea";
+const NOMBRE = "Fabiana";
 const REMITENTE = "Alejandro";
 
 const MENSAJES_FLORES = [
