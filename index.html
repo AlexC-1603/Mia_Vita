@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Un universo para ti</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <main id="app">
+
+    <!-- ESCENA 0: portada -->
+    <section class="scene active" data-scene="0">
+      <p class="eyebrow">un universo para ti</p>
+      <h1 class="name" id="nombre-portada"></h1>
+      <p class="line">Encontré algo en el universo que quería mostrarte.</p>
+      <button class="btn next-btn">Descubrir</button>
+    </section>
+
+    <!-- ESCENA 1: estrella fugaz -->
+    <section class="scene" data-scene="1">
+      <p class="line">Cada noche miraba el cielo</p>
+      <p class="line delay-1">buscando algo que se pareciera a ti.</p>
+      <button class="btn next-btn delay-2">Continuar</button>
+    </section>
+
+    <!-- ESCENA 2: constelación de corazón -->
+    <section class="scene" data-scene="2">
+      <svg id="heart-constellation" viewBox="0 0 300 260"></svg>
+      <p class="line" id="heart-text-1">Mi estrella favorita</p>
+      <p class="line delay-1" id="heart-text-2">siempre serás tú, <span class="nombre-inline"></span>.</p>
+      <button class="btn next-btn delay-2">Continuar</button>
+    </section>
+
+    <!-- ESCENA 3: planeta con una flor creciendo -->
+    <section class="scene" data-scene="3">
+      <p class="line">Entonces entendí algo...</p>
+      <div class="planet-wrap">
+        <div class="planet"></div>
+        <div class="flower-slot grown" id="flor-unica"></div>
+      </div>
+      <p class="line delay-1">y encontré un lugar que me recordó a ti.</p>
+      <button class="btn next-btn delay-2">Continuar</button>
+    </section>
+
+    <!-- ESCENA 4: interactiva, tocar flores -->
+    <section class="scene" data-scene="4">
+      <p class="line">Siempre elegiría aquel donde estés tú.</p>
+      <p class="hint">Toca cada flor</p>
+      <div class="planet-wrap" id="planeta-interactivo">
+        <div class="planet"></div>
+        <div id="flores-contenedor"></div>
+      </div>
+      <p class="flor-mensaje" id="mensaje-flor">&nbsp;</p>
+      <button class="btn next-btn hidden" id="continuar-flores">Continuar</button>
+    </section>
+
+    <!-- ESCENA 5: elegir una -->
+    <section class="scene" data-scene="5">
+      <p class="line">donde estés siempre me sentiré como en casa, porque tú eres mi hogar.</p>
+      <div class="planet-wrap small">
+        <div class="planet"></div>
+        <div class="flower-slot grown"></div>
+      </div>
+      <p class="line delay-1"> solo tú mia vita.</p>
+      <button class="btn next-btn delay-2">Continuar</button>
+    </section>
+
+    <!-- ESCENA 6: universo entero -->
+    <section class="scene" data-scene="6">
+      <p class="line">por eso no me bastó con unas pocas flores</p>
+      <p class="line delay-1 big">y preferí regalarte un universo entero.</p>
+      <p class="line delay-2">Porque para mí, <span class="nombre-inline"></span>,</p>
+      <p class="line delay-2">cualquier lugar será el mejor, porque tú haces que los lugares sean especiales.</p>
+      <button class="btn next-btn delay-3">Ver mi universo</button>
+    </section>
+
+    <!-- ESCENA 7: final -->
+    <section class="scene" data-scene="7">
+      <div class="planet-wrap small">
+        <div class="planet"></div>
+        <div class="flower-slot grown"></div>
+      </div>
+      <p class="line final-msg">estoy feliz que seas mi universo entero, <span class="nombre-inline"></span>.</p>
+      <p class="line delay-1 signature">Con amor, <span id="remitente"></span>.</p>
+      <button class="btn next-btn delay-2" id="restart-btn">Volver a jugar</button>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
